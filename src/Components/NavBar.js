@@ -1,5 +1,4 @@
 import SocialMedias from "./SocialMedias";
-import "./nav_style.css";
 import { useContext, useEffect, useLayoutEffect, useState } from "react";
 import { Theme } from "../App";
 import ReorderIcon from "@mui/icons-material/Reorder";

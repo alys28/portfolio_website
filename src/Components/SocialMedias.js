@@ -1,7 +1,5 @@
 import { useContext } from "react";
 import { Theme } from "../App";
-import "./nav_style.css";
-
 const githubLogo = require("../img/github.png");
 const githubDarkLogo = require("../img/github_dark.png");
 const linkedInLogo = require("../img/linkedIn.png");

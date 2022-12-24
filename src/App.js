@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import { useState, useEffect, createContext } from "react";
 import "./App.css";
 import NavBar from "./Components/NavBar";
+import Home from "./Components/Home";
 
 export const Theme = createContext();
 
@@ -28,7 +29,7 @@ function App() {
     <Theme.Provider value={[darkMode, setDarkMode]}>
       <div className="App w-full">
         <NavBar />
-        <p>ok</p>
+        <Home />
       </div>
     </Theme.Provider>
   );
