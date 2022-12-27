@@ -3,6 +3,7 @@ import { useState, useEffect, createContext } from "react";
 import "./App.css";
 import NavBar from "./Components/NavBar";
 import Home from "./Components/Home";
+import About from "./Components/About";
 
 export const Theme = createContext();
 
@@ -27,9 +28,10 @@ function App() {
 
   return (
     <Theme.Provider value={[darkMode, setDarkMode]}>
-      <div className="App w-full">
+      <div className="App">
         <NavBar />
         <Home />
+        <About />
       </div>
     </Theme.Provider>
   );

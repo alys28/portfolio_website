@@ -16,37 +16,46 @@ function useWindowWidth() {
   return width;
 }
 
-const CompressedNavBar = () => {
-  return (
-    <div id="small-width" className="p-2">
-      <div className="flex flex-col">
-        <a className=" text-black  hover:bg-slate-100 px-5 py-5   hover:text-slate-900 hover:rounded-lg dark:text-white">
-          Home
-        </a>
-        <a className=" text-black whitespace-nowrap hover:bg-slate-100 px-5 py-5   hover:text-slate-900 hover:rounded-lg dark:text-white">
-          About Me
-        </a>
-        <a className=" text-black  hover:bg-slate-100 px-5 py-5  hover:text-slate-900 hover:rounded-lg dark:text-white">
-          Background
-        </a>
-        <a className=" text-black  hover:bg-slate-100 px-5 py-5 hover:text-slate-900 hover:rounded-lg dark:text-white">
-          Projects
-        </a>
-        <a className=" text-black  hover:bg-slate-100 px-5 py-5  hover:text-slate-900 hover:rounded-lg dark:text-white">
-          Contact
-        </a>
-      </div>
-      <div className="flex justify-center">
-        <SocialMedias />
-      </div>
-    </div>
-  );
-};
-
 const NavBar = () => {
   const [darkMode, setDarkMode] = useContext(Theme);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const width = useWindowWidth();
+  const CompressedNavBar = () => {
+    const handleClick = (event) => {
+      setDrawerOpen(false);
+      event.preventDefault();
+      event.target.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+    return (
+      <div id="small-width" className="p-2">
+        <div className="flex flex-col">
+          <a
+            className=" text-black  hover:bg-slate-100 px-5 py-5   hover:text-slate-900 hover:rounded-lg dark:text-white"
+            onClick={handleClick}
+            href="#home"
+          >
+            Home
+          </a>
+          <a className=" text-black whitespace-nowrap hover:bg-slate-100 px-5 py-5   hover:text-slate-900 hover:rounded-lg dark:text-white">
+            About Me
+          </a>
+          <a className=" text-black  hover:bg-slate-100 px-5 py-5  hover:text-slate-900 hover:rounded-lg dark:text-white">
+            Background
+          </a>
+          <a className=" text-black  hover:bg-slate-100 px-5 py-5 hover:text-slate-900 hover:rounded-lg dark:text-white">
+            Projects
+          </a>
+          <a className=" text-black  hover:bg-slate-100 px-5 py-5  hover:text-slate-900 hover:rounded-lg dark:text-white">
+            Contact
+          </a>
+        </div>
+        <div className="flex justify-center">
+          <SocialMedias />
+        </div>
+      </div>
+    );
+  };
+
   useEffect(() => {
     if (window.innerWidth > 880 && drawerOpen) {
       console.log("OK");
@@ -55,9 +64,9 @@ const NavBar = () => {
   }, [width]);
   if (width <= 880) {
     return (
-      <div className="font-ChivoMono dark:bg-darkTheme w-full drop-shadow-md  bg-white">
+      <div className="font-ChivoMono dark:bg-darkTheme w-full bg-white">
         <div
-          className="flex items-center"
+          className="flex items-center "
           style={{ justifyContent: "space-between" }}
         >
           <img
@@ -83,7 +92,7 @@ const NavBar = () => {
   }
   return (
     <div
-      className="flex flex-wrap drop-shadow-md bg-white items-center  font-ChivoMono dark:bg-darkTheme w-full"
+      className="flex flex-wrap drop-shadow-md bg-white items-center  font-ChivoMono dark:bg-darkTheme "
       style={{ justifyContent: "space-between" }}
     >
       <img
@@ -96,7 +105,10 @@ const NavBar = () => {
       />
       <div id="hidden" className="flex">
         <nav className="flex space-x-6 items-center">
-          <a className="container text-black  hover:bg-slate-100 px-3 py-2 text-center md:text-sm sm: text-xs hover:text-slate-900 hover:rounded-lg dark:text-white">
+          <a
+            className="container text-black  hover:bg-slate-100 px-3 py-2 text-center md:text-sm sm: text-xs hover:text-slate-900 hover:rounded-lg dark:text-white"
+            href="#home"
+          >
             Home
           </a>
           <a className="container text-black whitespace-nowrap hover:bg-slate-100 px-3 py-2 text-center md:text-sm sm: text-xs hover:text-slate-900 hover:rounded-lg dark:text-white">
