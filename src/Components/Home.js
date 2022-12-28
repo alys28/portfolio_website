@@ -10,10 +10,10 @@ const profilePic = require("../img/aly_pic.jpeg");
 
 const Home = () => {
   const anchorTag = useRef();
-  const handleClick = (event) => {
-    event.preventDefault();
-    anchorTag.current.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
+  // const handleClick = (event) => {
+  //   event.preventDefault();
+  //   anchorTag.current.scrollIntoView({ behavior: "smooth" });
+  // };
   return (
     <div className="font-Montserrat dark:bg-[#121212]" id="home">
       <div className="flex flex-wrap">
@@ -23,9 +23,11 @@ const Home = () => {
               Hi, I'm Aly! 👋
             </h1>
 
-            <h2 className="text-[30px] dark:text-white">Software Developer</h2>
+            <h2 className="text-[30px] dark:text-white font-light">
+              Software Developer
+            </h2>
             <hr />
-            <h3 className="dark:text-white mt-10">
+            <h3 className="dark:text-white mt-10 font-light">
               Lorem Ipsufgherohruighreuiogheruiogheriuofghder oier.
               guihfuaisfhaeo aerioupfghaewipf gaewuivg fidgfuilewbgreiu fdfuifg
               euifgdfuig es
@@ -33,8 +35,8 @@ const Home = () => {
           </div>
           <div className="flex justify-center p-10">
             <a
-              className="bg-indigo-500 text-white p-3 rounded-lg hover:bg-indigo-500/70"
-              onClick={handleClick}
+              className="bg-indigo-500 text-white p-3 rounded-lg hover:bg-indigo-500/70 "
+              // onClick={handleClick}
               href="#about"
               ref={anchorTag}
             >

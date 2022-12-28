@@ -21,7 +21,7 @@ function App() {
       window
         .matchMedia("(prefers-color-scheme: dark)")
         .removeEventListener("change", (event) => {
-          console.log(event);
+          setDarkMode(event.matches);
         });
     };
   }, []);
