@@ -4,6 +4,9 @@ import "./App.css";
 import NavBar from "./Components/NavBar";
 import Home from "./Components/Home";
 import About from "./Components/About";
+import Experience from "./Components/Experience";
+import Blog from "./Components/Blog";
+import Contact from "./Components/Contact";
 
 export const Theme = createContext();
 
@@ -32,6 +35,9 @@ function App() {
         <NavBar />
         <Home />
         <About />
+        <Experience />
+        <Blog />
+        <Contact />
       </div>
     </Theme.Provider>
   );

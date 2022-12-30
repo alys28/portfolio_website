@@ -1,0 +1,11 @@
+.education-entry {
+  @apply border-t-2 border-gray-200 p-5;
+}
+
+.education-entry .title {
+  @apply font-bold text-[18px];
+}
+
+li::before {
+  content: "▶ ";
+}

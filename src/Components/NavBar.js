@@ -49,10 +49,16 @@ const NavBar = () => {
           <a className=" text-black  hover:bg-slate-100 px-5 py-5 hover:text-slate-900 hover:rounded-lg dark:text-white">
             Projects
           </a>
-          <a className=" text-black  hover:bg-slate-100 px-5 py-5  hover:text-slate-900 hover:rounded-lg dark:text-white">
+          <a
+            className=" text-black  hover:bg-slate-100 px-5 py-5  hover:text-slate-900 hover:rounded-lg dark:text-white"
+            href="#blog"
+          >
             Blog
           </a>
-          <a className=" text-black  hover:bg-slate-100 px-5 py-5  hover:text-slate-900 hover:rounded-lg dark:text-white">
+          <a
+            className=" text-black  hover:bg-slate-100 px-5 py-5  hover:text-slate-900 hover:rounded-lg dark:text-white"
+            href="#contact"
+          >
             Contact
           </a>
         </div>
@@ -129,10 +135,17 @@ const NavBar = () => {
           <a className="container text-black  hover:bg-slate-100 px-3 py-2 text-center md:text-sm sm: text-xs hover:text-slate-900 hover:rounded-lg dark:text-white">
             Projects
           </a>
-          <a className="container text-black  hover:bg-slate-100 px-3 py-2 text-center md:text-sm sm: text-xs hover:text-slate-900 hover:rounded-lg dark:text-white">
+          <a
+            href="#blog"
+            className="container text-black  hover:bg-slate-100 px-3 py-2 text-center md:text-sm sm: text-xs hover:text-slate-900 hover:rounded-lg dark:text-white"
+          >
             Blog
           </a>
-          <a className="container text-black  hover:bg-slate-100 px-3 py-2 text-center md:text-sm sm: text-xs hover:text-slate-900 hover:rounded-lg dark:text-white">
+
+          <a
+            href="#contact"
+            className="container text-black  hover:bg-slate-100 px-3 py-2 text-center md:text-sm sm: text-xs hover:text-slate-900 hover:rounded-lg dark:text-white"
+          >
             Contact
           </a>
         </nav>

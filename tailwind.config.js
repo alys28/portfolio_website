@@ -9,6 +9,7 @@ module.exports = {
       },
       colors: {
         darkTheme: "#262626",
+        bg_contact: "rgba(87, 66, 245, 0.9)",
       },
       maxHeight: {
         32: "32px",

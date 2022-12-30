@@ -130,7 +130,7 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="flex justify-around w-full">
+      <div className="flex justify-around w-full flex-wrap">
         <ServiceCard
           logo={
             darkMode
@@ -165,7 +165,7 @@ const About = () => {
         />
       </div>
       <div className="m-20  shadow-[0px_5px_11px_8px_rgba(0,0,0,0.1)] bg-white dark:bg-slate-800 dark:shadow-[0px_5px_11px_8px_rgba(255,255,255,0.05)] rounded-[20px] flex-wrap p-5">
-        <h2 className=" text-[40px] dark:text-white font-bold text-center">
+        <h2 className=" text-[40px] text-[#35383d] dark:text-white font-bold text-center">
           Technical Skills
         </h2>
         <div className="flex flex-wrap justify-center">
