@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import { useState, useEffect, createContext } from "react";
 import "./App.css";
 import NavBar from "./Components/NavBar";

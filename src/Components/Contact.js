@@ -50,7 +50,7 @@ const Contact = () => {
           />
           <button
             type="submit"
-            className="bg-white font-bold  text-indigo-600 hover:translate-y-[5px] hover:bg-indigo-800 hover:text-white	 w-[20%] self-center p-2 m-5 rounded-lg shadow-[0px_5px_11px_8px_rgba(0,0,0,0.1)]"
+            className="bg-white font-bold text-center text-indigo-600 hover:translate-y-[5px] hover:bg-indigo-800 hover:text-white	 w-[6rem] self-center p-2 m-5 rounded-lg shadow-[0px_5px_11px_8px_rgba(0,0,0,0.1)]"
           >
             Submit
           </button>
@@ -61,6 +61,7 @@ const Contact = () => {
           className="text-white font-ChivoMono"
           href="https://www.freepik.com/free-vector/abstract-colorful-technology-dotted-wave-background_6166234.htm#query=modern%20background&position=0&from_view=keyword"
           target="_blank"
+          rel="noreferrer"
         >
           Image by Harryarts on Freepik
         </a>

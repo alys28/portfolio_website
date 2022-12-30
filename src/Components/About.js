@@ -13,7 +13,7 @@ const SkillCard = ({ logo, name, efficiency }) => {
   } else {
     return (
       <div className="flex flex-col justify-center items-center p-8">
-        <img src={logo} style={{ height: "60px" }} />
+        <img src={logo} style={{ height: "60px" }} alt="programming language" />
         <p className="font-Montserrat font-light dark:text-gray-50">{name}</p>
       </div>
     );
@@ -24,7 +24,7 @@ const ServiceCard = ({ logo, name }) => {
   return (
     <div className="font-Montserrat">
       <div className="flex pb-8 justify-center items-center">
-        <img src={logo} style={{ height: "4rem" }} />
+        <img src={logo} style={{ height: "4rem" }} alt="service logo" />
       </div>
       <p className="text-center font-medium text-lg dark:text-white">{name}</p>
     </div>

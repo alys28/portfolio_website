@@ -17,7 +17,7 @@ function useWindowWidth() {
 }
 
 const NavBar = () => {
-  const [darkMode, setDarkMode] = useContext(Theme);
+  const [darkMode] = useContext(Theme);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const width = useWindowWidth();
   const CompressedNavBar = () => {
@@ -43,10 +43,16 @@ const NavBar = () => {
           >
             About Me
           </a>
-          <a className=" text-black  hover:bg-slate-100 px-5 py-5  hover:text-slate-900 hover:rounded-lg dark:text-white">
+          <a
+            className=" text-black  hover:bg-slate-100 px-5 py-5  hover:text-slate-900 hover:rounded-lg dark:text-white"
+            href="#experience"
+          >
             Experience
           </a>
-          <a className=" text-black  hover:bg-slate-100 px-5 py-5 hover:text-slate-900 hover:rounded-lg dark:text-white">
+          <a
+            className=" text-black  hover:bg-slate-100 px-5 py-5 hover:text-slate-900 hover:rounded-lg dark:text-white"
+            href="#projects"
+          >
             Projects
           </a>
           <a
@@ -73,6 +79,7 @@ const NavBar = () => {
     if (window.innerWidth > 980 && drawerOpen) {
       setDrawerOpen(false);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [width]);
   if (width <= 980) {
     return (
@@ -88,6 +95,7 @@ const NavBar = () => {
                 : require("../img/aly_logo.png")
             }
             className="h-20"
+            alt="Aly logo"
           />
           <div
             className="hover:bg-slate-100 hover:dark:bg-gray-600 hover:rounded-lg cursor-pointer m-4 p-3"
@@ -113,6 +121,7 @@ const NavBar = () => {
             ? require("../img/aly_logo_dark.png")
             : require("../img/aly_logo.png")
         }
+        alt="Aly Logo"
         className="h-20"
       />
       <div id="hidden" className="flex">
@@ -129,10 +138,16 @@ const NavBar = () => {
           >
             About Me
           </a>
-          <a className="container text-black  hover:bg-slate-100 px-3 py-2 text-center md:text-sm sm: text-xs hover:text-slate-900 hover:rounded-lg dark:text-white">
+          <a
+            className="container text-black  hover:bg-slate-100 px-3 py-2 text-center md:text-sm sm: text-xs hover:text-slate-900 hover:rounded-lg dark:text-white"
+            href="#experience"
+          >
             Experience
           </a>
-          <a className="container text-black  hover:bg-slate-100 px-3 py-2 text-center md:text-sm sm: text-xs hover:text-slate-900 hover:rounded-lg dark:text-white">
+          <a
+            className="container text-black  hover:bg-slate-100 px-3 py-2 text-center md:text-sm sm: text-xs hover:text-slate-900 hover:rounded-lg dark:text-white"
+            href="#projects"
+          >
             Projects
           </a>
           <a
