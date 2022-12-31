@@ -2,7 +2,11 @@ import "./experience.css";
 
 const WorkItem = ({ name, company, date, description }) => {
   return (
-    <div className="flex flex-col flex-1 items-center p-5 dark:text-white">
+    <div
+      data-aos="zoom-up"
+      data-aos-easing="ease-out"
+      className="flex flex-col flex-1 items-center p-5 dark:text-white"
+    >
       <div>
         <div className="font-bold">{name}</div>
         <div className="font-bold">@{company}</div>
@@ -117,6 +121,17 @@ const Experience = () => {
             />
           </div>
         </div>
+      </div>
+      <div className="flex justify-center pb-10 text-lg ">
+        <a
+          target="_blank"
+          data-aos="fade-left"
+          rel="noopener noreferrer"
+          href="https://github.com/Freakboy123/Resume/blob/main/Shariff_CV.pdf"
+          className="border-2 p-3 rounded-lg font-ChivoMono text-indigo-400 border-indigo-400 shadow-lg hover:shadow-[0px_5px_11px_8px_rgba(255,255,255,0.1)]"
+        >
+          View Full CV
+        </a>
       </div>
     </div>
   );

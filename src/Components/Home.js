@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { Link } from "react-scroll";
-
+import { TypeAnimation } from "react-type-animation";
 import "./Home.css";
 const profilePic = require("../img/aly_pic.jpeg");
 
@@ -17,9 +17,9 @@ const Home = () => {
   //   anchorTag.current.scrollIntoView({ behavior: "smooth" });
   // };
   return (
-    <div className="font-Montserrat dark:bg-[#121212]" id="home">
+    <div className="font-Montserrat dark:bg-[#121212] " id="home">
       <div className="flex flex-wrap">
-        <div className="flex flex-col font-Montserrat flex-1 items-center justify-between pt-[6%] grow basis-1/2">
+        <div className="flex flex-col font-Montserrat flex-1 items-center justify-around pt-[6%] grow basis-1/2 h-[90vh]">
           <div className="flex flex-col p-10">
             <h1
               data-aos="fade-left"
@@ -27,15 +27,27 @@ const Home = () => {
             >
               Hi, I'm Aly! 👋
             </h1>
+            <TypeAnimation
+              sequence={[
+                "Software Developer", // Types 'One'
+                500, // Waits 500ms
+                "CEGEP Student", // Deletes 'Software Developer' and types 'CEGEP Student'
+                500,
+                "Entrepreneur", // Types 'Entrepreneur'
+                500,
+                "Machine Learning Enthusiast",
+                750,
+              ]}
+              wrapper="h2"
+              cursor={true}
+              repeat={Infinity}
+              className="text-[30px] dark:text-white font-light"
+            />
 
-            <h2 className="text-[30px] dark:text-white font-light">
-              Software Developer
-            </h2>
             <hr />
-            <h3 className="dark:text-white mt-10 font-light">
-              Lorem Ipsufgherohruighreuiogheruiogheriuofghder oier.
-              guihfuaisfhaeo aerioupfghaewipf gaewuivg fidgfuilewbgreiu fdfuifg
-              euifgdfuig es
+            <h3 className="dark:text-white mt-10 font-light text-lg">
+              Welcome to my Website! Excited to have you here! You can learn
+              more about what I do and checkout my latest projects.
             </h3>
           </div>
           <div className="flex justify-center p-10">
@@ -57,20 +69,19 @@ const Home = () => {
           </div>
         </div>
         <div
-          className="relative  p-20 justify-center dark:text-white -z-[1] dark:z-0 flex-[0.5] grow basis-1/2"
+          className="relative flex justify-center items-center dark:text-white -z-[1] dark:z-0 flex-[0.5] grow basis-1/2"
           style={{
             backgroundImage: `url(${require("../img/home_bg.png")})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
         >
-          <div className="flex justify-center">
+          <div className="flex justify-center min-w-[450px] ">
             <img
               src={profilePic}
               className="profile-pic"
               data-aos="zoom-in"
               style={{
-                display: "block",
                 maxHeight: "400px",
                 width: "auto",
                 height: "auto",

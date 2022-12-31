@@ -3,6 +3,7 @@ const Contact = () => {
     <div
       id="contact"
       style={{
+        height: "90vh",
         display: "flex",
         padding: "20px",
         justifyContent: "center",
@@ -14,13 +15,13 @@ const Contact = () => {
     >
       <div
         data-aos="fade-left"
-        className="flex flex-col bg-bg_contact shadow-[0px_5px_11px_8px_rgba(255,255,255,0.2)] rounded-lg p-5 w-[80%] m-5"
+        className="flex flex-col justify-around bg-bg_contact shadow-[0px_5px_11px_8px_rgba(255,255,255,0.2)] rounded-lg p-5 w-[80%] m-5"
       >
         <h1 className="font-bold text-[50px] text-white p-10 text-center">
           Get in Touch!
         </h1>
         <h2 className="text-gray-300 text-xl">
-          Have a question? Feel free to hit me up! Send me an email:{" "}
+          Have a question? Feel free to hit me up! Send me an email: <br />
           <a
             href="mailto:alyshariff2810@gmail.com"
             className="underline underline-offset-2"

@@ -25,42 +25,94 @@ const NavBar = () => {
     return (
       <div id="small-width" className="p-2">
         <div className="flex flex-col">
-          <a
+          <Link
+            onClick={() => {
+              setDrawerOpen(false);
+            }}
+            to="home"
+            spy={true}
+            smooth={true}
+            offset={-450}
+            duration={1000}
             className=" text-black  hover:bg-slate-100 px-5 py-5   hover:text-slate-900 hover:rounded-lg dark:text-white"
-            href="#home"
           >
             Home
-          </a>
-          <a
+          </Link>
+          <Link
+            onClick={() => {
+              setTimeout(() => {
+                setDrawerOpen(false);
+              }, 2000);
+            }}
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={1000}
             className=" text-black whitespace-nowrap hover:bg-slate-100 px-5 py-5   hover:text-slate-900 hover:rounded-lg dark:text-white"
-            href="#about"
           >
             About Me
-          </a>
-          <a
+          </Link>
+          <Link
+            onClick={() => {
+              setTimeout(() => {
+                setDrawerOpen(false);
+              }, 2000);
+            }}
+            to="experience"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={1000}
             className=" text-black  hover:bg-slate-100 px-5 py-5  hover:text-slate-900 hover:rounded-lg dark:text-white"
-            href="#experience"
           >
             Experience
-          </a>
-          <a
+          </Link>
+          <Link
+            onClick={() => {
+              setTimeout(() => {
+                setDrawerOpen(false);
+              }, 2000);
+            }}
+            to="projects"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={1000}
             className=" text-black  hover:bg-slate-100 px-5 py-5 hover:text-slate-900 hover:rounded-lg dark:text-white"
-            href="#projects"
           >
             Projects
-          </a>
-          <a
+          </Link>
+          <Link
+            onClick={() => {
+              setTimeout(() => {
+                setDrawerOpen(false);
+              }, 3000);
+            }}
+            to="blog"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={1000}
             className=" text-black  hover:bg-slate-100 px-5 py-5  hover:text-slate-900 hover:rounded-lg dark:text-white"
-            href="#blog"
           >
             Blog
-          </a>
-          <a
+          </Link>
+          <Link
+            onClick={() => {
+              setTimeout(() => {
+                setDrawerOpen(false);
+              }, 3000);
+            }}
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={1000}
             className=" text-black  hover:bg-slate-100 px-5 py-5  hover:text-slate-900 hover:rounded-lg dark:text-white"
-            href="#contact"
           >
             Contact
-          </a>
+          </Link>
         </div>
         <div className="flex justify-center">
           <SocialMedias />
@@ -121,6 +173,9 @@ const NavBar = () => {
       <div id="hidden" className="flex">
         <nav className="flex space-x-6 items-center">
           <Link
+            onClick={() => {
+              setDrawerOpen(false);
+            }}
             to="home"
             spy={true}
             smooth={true}
@@ -131,6 +186,9 @@ const NavBar = () => {
             Home
           </Link>
           <Link
+            onClick={() => {
+              setDrawerOpen(false);
+            }}
             to="about"
             spy={true}
             smooth={true}
@@ -141,6 +199,9 @@ const NavBar = () => {
             About Me
           </Link>
           <Link
+            onClick={() => {
+              setDrawerOpen(false);
+            }}
             className="container hover:cursor-pointer text-black  hover:bg-slate-100 px-3 py-2 text-center md:text-sm sm: text-xs hover:text-slate-900 hover:rounded-lg dark:text-white"
             to="experience"
             spy={true}
@@ -151,6 +212,9 @@ const NavBar = () => {
             Experience
           </Link>
           <Link
+            onClick={() => {
+              setDrawerOpen(false);
+            }}
             className="container hover:cursor-pointer text-black  hover:bg-slate-100 px-3 py-2 text-center md:text-sm sm: text-xs hover:text-slate-900 hover:rounded-lg dark:text-white"
             to="projects"
             spy={true}
@@ -172,6 +236,9 @@ const NavBar = () => {
           </Link>
 
           <Link
+            onClick={() => {
+              setDrawerOpen(false);
+            }}
             to="contact"
             spy={true}
             smooth={true}
