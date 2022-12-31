@@ -1,0 +1,10 @@
+.notable-stat {
+  @apply flex flex-col items-center text-white font-ChivoMono w-[10rem] text-lg justify-center shadow-lg bg-slate-800 rounded-lg p-5 m-2 hover:-translate-y-1 hover:scale-110 duration-200;
+}
+
+.notable-stat h4 {
+  @apply font-bold text-center;
+}
+.notable-stat p {
+  @apply text-center text-sm text-gray-300;
+}

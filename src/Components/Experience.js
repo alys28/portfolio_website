@@ -96,7 +96,7 @@ const Experience = () => {
               company={"Gestion Immobilière Anwar Inc."}
               date={"Apr. 2022 - Present"}
               description={
-                "Responsible for helping manage finances at a real estate company. I mainly take care of compiling the spendings and revenus using spreadsheets and Sage 50, an accounting software. I also made an automation software using Python that saved time by 50%."
+                "Responsible for helping manage finances at a real estate company. I mainly take care of compiling the spendings and revenus using spreadsheets and Sage 50, an accounting software. I also made an automation software using Python that reduced time by 50%."
               }
             />
             <WorkItem

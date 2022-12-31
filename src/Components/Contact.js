@@ -12,7 +12,10 @@ const Contact = () => {
         backgroundSize: "cover",
       }}
     >
-      <div className="flex flex-col bg-bg_contact shadow-[0px_5px_11px_8px_rgba(255,255,255,0.2)] rounded-lg p-5 w-[80%] m-5">
+      <div
+        data-aos="fade-left"
+        className="flex flex-col bg-bg_contact shadow-[0px_5px_11px_8px_rgba(255,255,255,0.2)] rounded-lg p-5 w-[80%] m-5"
+      >
         <h1 className="font-bold text-[50px] text-white p-10 text-center">
           Get in Touch!
         </h1>

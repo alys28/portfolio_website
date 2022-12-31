@@ -2,6 +2,7 @@ import SocialMedias from "./SocialMedias";
 import { useContext, useEffect, useLayoutEffect, useState } from "react";
 import { Theme } from "../App";
 import ReorderIcon from "@mui/icons-material/Reorder";
+import { Link } from "react-scroll";
 
 function useWindowWidth() {
   const [width, setWidth] = useState(0);
@@ -21,24 +22,17 @@ const NavBar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const width = useWindowWidth();
   const CompressedNavBar = () => {
-    const handleClick = (event) => {
-      setDrawerOpen(false);
-      event.preventDefault();
-      event.target.scrollIntoView({ behavior: "smooth", block: "start" });
-    };
     return (
       <div id="small-width" className="p-2">
         <div className="flex flex-col">
           <a
             className=" text-black  hover:bg-slate-100 px-5 py-5   hover:text-slate-900 hover:rounded-lg dark:text-white"
-            onClick={handleClick}
             href="#home"
           >
             Home
           </a>
           <a
             className=" text-black whitespace-nowrap hover:bg-slate-100 px-5 py-5   hover:text-slate-900 hover:rounded-lg dark:text-white"
-            onClick={handleClick}
             href="#about"
           >
             About Me
@@ -126,43 +120,67 @@ const NavBar = () => {
       />
       <div id="hidden" className="flex">
         <nav className="flex space-x-6 items-center">
-          <a
-            className="container text-black  hover:bg-slate-100 px-3 py-2 text-center md:text-sm sm: text-xs hover:text-slate-900 hover:rounded-lg dark:text-white"
-            href="#home"
+          <Link
+            to="home"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+            className="hover:cursor-pointer container text-black  hover:bg-slate-100 px-3 py-2 text-center md:text-sm sm: text-xs hover:text-slate-900 hover:rounded-lg dark:text-white"
           >
             Home
-          </a>
-          <a
-            className="container text-black whitespace-nowrap hover:bg-slate-100 px-3 py-2 text-center md:text-sm sm: text-xs hover:text-slate-900 hover:rounded-lg dark:text-white"
-            href="#about"
+          </Link>
+          <Link
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={1000}
+            className="container hover:cursor-pointer text-black whitespace-nowrap hover:bg-slate-100 px-3 py-2 text-center md:text-sm sm: text-xs hover:text-slate-900 hover:rounded-lg dark:text-white"
           >
             About Me
-          </a>
-          <a
-            className="container text-black  hover:bg-slate-100 px-3 py-2 text-center md:text-sm sm: text-xs hover:text-slate-900 hover:rounded-lg dark:text-white"
-            href="#experience"
+          </Link>
+          <Link
+            className="container hover:cursor-pointer text-black  hover:bg-slate-100 px-3 py-2 text-center md:text-sm sm: text-xs hover:text-slate-900 hover:rounded-lg dark:text-white"
+            to="experience"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
           >
             Experience
-          </a>
-          <a
-            className="container text-black  hover:bg-slate-100 px-3 py-2 text-center md:text-sm sm: text-xs hover:text-slate-900 hover:rounded-lg dark:text-white"
-            href="#projects"
+          </Link>
+          <Link
+            className="container hover:cursor-pointer text-black  hover:bg-slate-100 px-3 py-2 text-center md:text-sm sm: text-xs hover:text-slate-900 hover:rounded-lg dark:text-white"
+            to="projects"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={1800}
           >
             Projects
-          </a>
-          <a
-            href="#blog"
-            className="container text-black  hover:bg-slate-100 px-3 py-2 text-center md:text-sm sm: text-xs hover:text-slate-900 hover:rounded-lg dark:text-white"
+          </Link>
+          <Link
+            to="blog"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={1700}
+            className="container hover:cursor-pointer text-black  hover:bg-slate-100 px-3 py-2 text-center md:text-sm sm: text-xs hover:text-slate-900 hover:rounded-lg dark:text-white"
           >
             Blog
-          </a>
+          </Link>
 
-          <a
-            href="#contact"
-            className="container text-black  hover:bg-slate-100 px-3 py-2 text-center md:text-sm sm: text-xs hover:text-slate-900 hover:rounded-lg dark:text-white"
+          <Link
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={1800}
+            className="container hover:cursor-pointer text-black  hover:bg-slate-100 px-3 py-2 text-center md:text-sm sm: text-xs hover:text-slate-900 hover:rounded-lg dark:text-white"
           >
             Contact
-          </a>
+          </Link>
         </nav>
         <SocialMedias />
       </div>

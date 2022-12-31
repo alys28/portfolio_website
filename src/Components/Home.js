@@ -1,4 +1,6 @@
 import { useRef } from "react";
+import { Link } from "react-scroll";
+
 import "./Home.css";
 const profilePic = require("../img/aly_pic.jpeg");
 
@@ -19,7 +21,10 @@ const Home = () => {
       <div className="flex flex-wrap">
         <div className="flex flex-col font-Montserrat flex-1 items-center justify-between pt-[6%] grow basis-1/2">
           <div className="flex flex-col p-10">
-            <h1 className="font-bold text-[50px] dark:text-white">
+            <h1
+              data-aos="fade-left"
+              className="font-bold text-[50px] dark:text-white"
+            >
               Hi, I'm Aly! 👋
             </h1>
 
@@ -34,14 +39,21 @@ const Home = () => {
             </h3>
           </div>
           <div className="flex justify-center p-10">
-            <a
+            <Link
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={700}
+              data-aos="fade-right"
+              data-aos-easing="ease-in-sine"
               className="bg-indigo-500 text-white p-3 rounded-lg hover:bg-indigo-500/70 "
               // onClick={handleClick}
               href="#about"
               ref={anchorTag}
             >
               Learn More
-            </a>
+            </Link>
           </div>
         </div>
         <div
@@ -56,6 +68,7 @@ const Home = () => {
             <img
               src={profilePic}
               className="profile-pic"
+              data-aos="zoom-in"
               style={{
                 display: "block",
                 maxHeight: "400px",

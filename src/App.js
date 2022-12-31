@@ -6,6 +6,8 @@ import About from "./Components/About";
 import Experience from "./Components/Experience";
 import Blog from "./Components/Blog";
 import Contact from "./Components/Contact";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export const Theme = createContext();
 
@@ -13,6 +15,10 @@ function App() {
   const [darkMode, setDarkMode] = useState(
     window.matchMedia("(prefers-color-scheme: dark)").matches
   );
+  useEffect(() => {
+    Aos.init({ duration: 1000 }); //Initialize animation functionality to all components
+  }, []);
+
   useEffect(() => {
     window
       .matchMedia("(prefers-color-scheme: dark)")
@@ -37,6 +43,11 @@ function App() {
         <Experience />
         <Blog />
         <Contact />
+        <footer className="font-ChivoMono text-center p-1 bg-[#121212]">
+          <p className="text-gray-400 text-xs">
+            Copyright © 2023. All Rights Reserved.
+          </p>
+        </footer>
       </div>
     </Theme.Provider>
   );

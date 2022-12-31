@@ -1,18 +1,19 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Theme } from "../App";
+import "./about.css";
 
 const SkillCard = ({ logo, name, efficiency }) => {
   const special_names = ["Python", "HTML", "CSS", "NumPy"];
   if (special_names.indexOf(name) < 0) {
     return (
-      <div className="flex flex-col justify-center items-center p-8">
+      <div className="flex flex-col justify-center items-center p-8 hover:-translate-y-1 hover:scale-110 duration-200">
         <i className={logo} style={{ fontSize: "60px" }}></i>
         <p className="font-Montserrat font-light dark:text-gray-50">{name}</p>
       </div>
     );
   } else {
     return (
-      <div className="flex flex-col justify-center items-center p-8">
+      <div className="flex flex-col justify-center items-center p-8 hover:-translate-y-1 hover:scale-110 duration-200">
         <img src={logo} style={{ height: "60px" }} alt="programming language" />
         <p className="font-Montserrat font-light dark:text-gray-50">{name}</p>
       </div>
@@ -92,6 +93,7 @@ const skillsList = [
 
 const About = () => {
   const [darkMode] = useContext(Theme);
+
   return (
     <div className="flex flex-col items-center dark:bg-[#121212] bg-gray-50">
       <h1 className="font-bold text-[50px] dark:text-white pt-10" id="about">
@@ -164,8 +166,31 @@ const About = () => {
           name="Online Marketing"
         />
       </div>
-      <div className="m-20  shadow-[0px_5px_11px_8px_rgba(0,0,0,0.1)] bg-white dark:bg-slate-800 dark:shadow-[0px_5px_11px_8px_rgba(255,255,255,0.05)] rounded-[20px] flex-wrap p-5">
-        <h2 className=" text-[40px] text-[#35383d] dark:text-white font-bold text-center">
+      <div
+        className="flex justify-around w-full mt-10 p-7"
+        style={{
+          background:
+            "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(79,70,229,1) 0%, rgba(0,161,255,1) 100%)",
+        }}
+      >
+        <div data-aos="zoom-in" className="notable-stat">
+          <h4>$55,000+</h4>
+          <p>in sales</p>
+        </div>
+        <div data-aos="zoom-in" className="notable-stat">
+          <h4>100+</h4>
+          <p>satisfied customers</p>
+        </div>
+        <div data-aos="zoom-in" className="notable-stat">
+          <h4>4</h4>
+          <p>years of coding experience</p>
+        </div>
+      </div>
+      <div
+        data-aos="fade-up"
+        className="m-20 mt-10 shadow-[0px_5px_11px_8px_rgba(0,0,0,0.1)] bg-white dark:bg-slate-800 dark:shadow-[0px_5px_11px_8px_rgba(255,255,255,0.05)] rounded-[20px] flex-wrap p-5"
+      >
+        <h2 className="text-[40px] text-[#35383d] dark:text-white font-bold text-center">
           Technical Skills
         </h2>
         <div className="flex flex-wrap justify-center">
