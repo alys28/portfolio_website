@@ -31,13 +31,10 @@ const Contact = () => {
         </h2>
         <form
           className="flex flex-col justify-around"
-          name="contact v1"
-          data-netlify="true"
+          name="contact"
           method="post"
-          onSubmit="submit"
         >
-          <input type="hidden" name="form-name" value="contact v1" />
-
+          <input type="hidden" name="form-name" value="contact" />
           <div className="flex flex-wrap">
             <input
               required
@@ -57,11 +54,10 @@ const Contact = () => {
           </div>
           <textarea
             required
-            type="text"
             name="message"
             placeholder="Your message"
             className="m-5 p-2 rounded-sm bg-transparent border-2 min-h-[100px] text-white"
-          />
+          ></textarea>
           <input
             type="submit"
             value="Submit"
