@@ -34,7 +34,7 @@ const Contact = () => {
           className="flex flex-col justify-around"
           name="contact"
           method="POST"
-          data-netlify="true"
+          netlify
         >
           <div className="flex flex-wrap">
             <input
