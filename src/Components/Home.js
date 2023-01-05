@@ -80,6 +80,7 @@ const Home = () => {
             <img
               src={profilePic}
               className="profile-pic"
+              alt="profile-pic"
               data-aos="zoom-in"
               style={{
                 maxHeight: "400px",

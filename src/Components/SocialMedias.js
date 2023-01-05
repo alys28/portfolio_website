@@ -6,7 +6,7 @@ const linkedInLogo = require("../img/linkedIn.png");
 const linkedInDarkLogo = require("../img/linkedIn_dark.png");
 
 const SocialMedias = () => {
-  const [darkMode, setDarkMode] = useContext(Theme);
+  const [darkMode] = useContext(Theme);
   return (
     <div className="flex">
       <a
@@ -17,6 +17,7 @@ const SocialMedias = () => {
       >
         <img
           src={darkMode ? githubDarkLogo : githubLogo}
+          alt="linkedin Logo"
           className="social_img max-h-32 min-h-[16px] w-full min-w-[16px]"
         />
       </a>
@@ -27,6 +28,7 @@ const SocialMedias = () => {
         className="p-5"
       >
         <img
+          alt="github logo"
           src={darkMode ? linkedInDarkLogo : linkedInLogo}
           className="social_img max-h-32 min-h-[16px] w-full min-w-[16px]"
         />
