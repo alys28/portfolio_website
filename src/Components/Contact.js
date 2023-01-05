@@ -1,4 +1,19 @@
 const Contact = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => console.log("Form successfully submitted"))
+      .catch((error) => alert(error));
+  };
+
   return (
     <div
       id="contact"
@@ -63,6 +78,9 @@ const Contact = () => {
           />
           <button
             type="submit"
+            onSubmit={() => {
+              handleSubmit();
+            }}
             className="bg-white font-bold text-center text-indigo-600 hover:translate-y-[5px] hover:bg-indigo-800 hover:text-white	 w-[6rem] self-center p-2 m-5 rounded-lg shadow-[0px_5px_11px_8px_rgba(0,0,0,0.1)]"
           >
             Submit
