@@ -8,6 +8,7 @@ import Blog from "./Components/Blog";
 import Contact from "./Components/Contact";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Projects from "./Components/Projects";
 
 export const Theme = createContext();
 
@@ -41,6 +42,7 @@ function App() {
         <Home />
         <About />
         <Experience />
+        <Projects />
         <Blog />
         <Contact />
         <footer className="font-ChivoMono text-center p-1 bg-[#121212]">

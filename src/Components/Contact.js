@@ -3,7 +3,8 @@ const Contact = () => {
     <div
       id="contact"
       style={{
-        height: "90vh",
+        height: "70vh",
+        minHeight: "800px",
         display: "flex",
         padding: "20px",
         justifyContent: "center",
@@ -21,7 +22,7 @@ const Contact = () => {
           Get in Touch!
         </h1>
         <h2 className="text-gray-300 text-xl">
-          Have a question? Feel free to hit me up! Send me an email: <br />
+          Have a question? Feel free to contact me! Send me an email: <br />
           <a
             href="mailto:alyshariff2810@gmail.com"
             className="underline underline-offset-2"

@@ -1,17 +1,32 @@
 import "./experience.css";
 
-const WorkItem = ({ name, company, date, description }) => {
+const WorkItem = ({ name, company, date, description, image }) => {
   return (
     <div
       data-aos="zoom-up"
       data-aos-easing="ease-out"
-      className="flex flex-col flex-1 items-center p-5 dark:text-white"
+      className="flex flex-col flex-1 items-center p-5 m-5 dark:text-white  min-w-[300px]"
     >
       <div>
-        <div className="font-bold">{name}</div>
-        <div className="font-bold">@{company}</div>
+        <div className="flex justify-between">
+          <div>
+            <div className="font-bold">{name}</div>
+            <div className="font-bold">@{company}</div>
+          </div>
+          {image && (
+            <img
+              src={image}
+              style={{
+                borderRadius: "50%",
+                height: "50px",
+                marginLeft: "10px",
+              }}
+              alt="company logo"
+            />
+          )}
+        </div>
         <div className="text-md text-slate-400	">{date}</div>
-        <div className="font-thin	 pt-4 text-[1rem] pr-[50px] text-justify">
+        <div className="font-thin	 pt-4 text-[1rem] text-justify">
           {description}
         </div>
       </div>
@@ -22,7 +37,7 @@ const WorkItem = ({ name, company, date, description }) => {
 const Experience = () => {
   //Education, work experience, awards + certification
   return (
-    <div className="dark:text-white dark:bg-darkTheme">
+    <div className="dark:text-white dark:bg-darkTheme bg-[#edf2f8]">
       <h1
         className="font-bold text-[50px] dark:text-white pt-10 text-center"
         id="experience"
@@ -110,6 +125,7 @@ const Experience = () => {
               description={
                 "Built this company with two school colleagues during the summer. We offered cleaning services for exterior surfaces. I was responsible for administrating and marketing the business online. Made nearly $11,000 in sales in just 4 months. "
               }
+              image={require("../img/evo_logo.png")}
             />
             <WorkItem
               name={"Co-Founder and CEO"}
@@ -118,6 +134,7 @@ const Experience = () => {
               description={
                 "Company started during the COVID pandemic with three school colleagues. I kept track of finances, and communicated with clients and tutors. I also led my team in planning and setting up strategies to attract a bigger audience. Made over $45,000 in sales and served over 100 clients."
               }
+              image={require("../img/axyas_logo.png")}
             />
           </div>
         </div>

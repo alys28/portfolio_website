@@ -1,6 +1,6 @@
 const Blog = () => {
   return (
-    <div id="blog" className="dark:bg-[#313233] pb-10">
+    <div id="blog" className="dark:bg-[#313233]  pb-10">
       <h1 className="font-bold text-[50px] dark:text-white pt-10 text-center">
         Blog
       </h1>
