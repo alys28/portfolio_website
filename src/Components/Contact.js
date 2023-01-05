@@ -1,19 +1,4 @@
 const Contact = () => {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    const myForm = event.target;
-    const formData = new FormData(myForm);
-
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => console.log("Form successfully submitted"))
-      .catch((error) => alert(error));
-  };
-
   return (
     <div
       id="contact"
@@ -61,6 +46,7 @@ const Contact = () => {
               placeholder="Full name"
               className="sm:m-5 mt-2 sm:p-2  rounded-sm bg-transparent border-b-2 text-white flex-1"
             />
+
             <input
               required
               type="email"
@@ -76,15 +62,11 @@ const Contact = () => {
             placeholder="Your message"
             className="m-5 p-2 rounded-sm bg-transparent border-2 min-h-[100px] text-white"
           />
-          <button
+          <input
             type="submit"
-            onSubmit={() => {
-              handleSubmit();
-            }}
+            value="Submit"
             className="bg-white font-bold text-center text-indigo-600 hover:translate-y-[5px] hover:bg-indigo-800 hover:text-white	 w-[6rem] self-center p-2 m-5 rounded-lg shadow-[0px_5px_11px_8px_rgba(0,0,0,0.1)]"
-          >
-            Submit
-          </button>
+          />
         </form>
       </div>
       <div className="absolute right-0 bottom-0 p-3 text-xs">
