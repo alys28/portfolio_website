@@ -32,7 +32,8 @@ const Contact = () => {
         </h2>
         <form
           className="flex flex-col justify-around"
-          action="POST"
+          name="contact"
+          method="POST"
           data-netlify="true"
         >
           <div className="flex flex-wrap">
