@@ -18,7 +18,7 @@ const SocialMedias = () => {
         <img
           src={darkMode ? githubDarkLogo : githubLogo}
           alt="linkedin Logo"
-          className="social_img max-h-32 min-h-[16px] w-full min-w-[16px]"
+          className="social_img max-h-32 min-h-[16px] min-w-[16px]"
         />
       </a>
       <a
@@ -30,7 +30,7 @@ const SocialMedias = () => {
         <img
           alt="github logo"
           src={darkMode ? linkedInDarkLogo : linkedInLogo}
-          className="social_img max-h-32 min-h-[16px] w-full min-w-[16px]"
+          className="social_img max-h-32 min-h-[16px] min-w-[16px]"
         />
       </a>
     </div>
