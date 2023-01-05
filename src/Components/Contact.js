@@ -33,9 +33,12 @@ const Contact = () => {
         <form
           className="flex flex-col justify-around"
           name="contact"
-          method="POST"
           netlify
+          netlify-honeypot="bot-field"
+          hidden
         >
+          <input type="hidden" name="form-name" value="contact" />
+
           <div className="flex flex-wrap">
             <input
               required
