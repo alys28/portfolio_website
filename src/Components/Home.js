@@ -76,17 +76,19 @@ const Home = () => {
             backgroundSize: "cover",
           }}
         >
-          <div className="flex justify-center min-w-[450px] ">
+          <div className="flex justify-center min-w-[450px] p-10">
             <img
               src={profilePic}
               className="profile-pic"
               alt="profile-pic"
               data-aos="zoom-in"
               style={{
-                maxHeight: "400px",
+                minHeight: "250px",
+                maxHeight: "500px",
                 width: "auto",
                 height: "auto",
                 borderRadius: "50%",
+                objectFit: "cover",
               }}
             />
           </div>
