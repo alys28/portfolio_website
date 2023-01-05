@@ -59,7 +59,6 @@ const Contact = () => {
             placeholder="Your message"
             className="m-5 p-2 rounded-sm bg-transparent border-2 min-h-[100px] text-white"
           />
-          <div data-netlify-recaptcha="true"></div>
           <button
             type="submit"
             className="bg-white font-bold text-center text-indigo-600 hover:translate-y-[5px] hover:bg-indigo-800 hover:text-white	 w-[6rem] self-center p-2 m-5 rounded-lg shadow-[0px_5px_11px_8px_rgba(0,0,0,0.1)]"
