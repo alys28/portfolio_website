@@ -99,20 +99,20 @@ const About = () => {
       <h1 className="font-bold text-[50px] dark:text-white pt-10" id="about">
         About Me
       </h1>
-      <div className="flex w-full p-10">
-        <div className="flex-1 pr-5">
+      <div className="flex w-full p-10 flex-wrap">
+        <div className="flex-1 pr-5 min-w-[250px]">
           <h3 className="text-indigo-400 font-bold text-xl">
             STEM Student and Programmer
           </h3>
-          <p className="text-gray-500 p-2 font-light dark:text-gray-300 text-lg">
-            I'm currently an <b>18-year-old CEGEP student</b> based in Montreal
-            at <b>Marianopolis College</b> in the Honours Pure and Applied
-            Science Program. I have been coding for almost 4 years and my work
-            is mainly focused in <b>web development and machine learning</b>. I
-            discovered my passion for software development during the COVID
-            pandemic, when I realized the importance of technology and its
-            impact on our lives. As a STEM student, I want to contribute to
-            society's innovations of tomorrow.
+          <p className="text-gray-500 p-2 font-light dark:text-gray-300 text-lg ">
+            I'm currently an <b>18-year-old CEGEP student</b> in Montreal
+            attending <b>Marianopolis College</b> in the Honours Pure and
+            Applied Science Program. I have been coding for almost 4 years and
+            my work is mainly focused in{" "}
+            <b>web development and machine learning</b>. I discovered my passion
+            for software development during the COVID pandemic, when I realized
+            the importance of technology and its impact on our lives. As a STEM
+            student, I want to contribute to society's innovations of tomorrow.
           </p>
         </div>
         <div className="flex-1 pl-5">
@@ -167,7 +167,7 @@ const About = () => {
         />
       </div>
       <div
-        className="flex justify-around w-full mt-10 p-7"
+        className="notable-stats-section flex justify-around w-full mt-10 p-7"
         style={{
           background:
             "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(79,70,229,1) 0%, rgba(0,161,255,1) 100%)",

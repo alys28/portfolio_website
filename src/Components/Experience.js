@@ -142,7 +142,7 @@ const Experience = () => {
       <div className="flex justify-center pb-10 text-lg ">
         <a
           target="_blank"
-          data-aos="fade-left"
+          data-aos="fade-right"
           rel="noopener noreferrer"
           href="https://github.com/Freakboy123/Resume/blob/main/Shariff_CV.pdf"
           className="border-2 p-3 rounded-lg font-ChivoMono text-indigo-400 border-indigo-400 shadow-lg hover:shadow-[0px_5px_11px_8px_rgba(255,255,255,0.1)]"

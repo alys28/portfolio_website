@@ -76,7 +76,7 @@ const Home = () => {
             backgroundSize: "cover",
           }}
         >
-          <div className="flex justify-center min-w-[450px] p-10">
+          <div className="profile-pic-container flex justify-center min-w-[450px] p-10">
             <img
               src={profilePic}
               className="profile-pic"

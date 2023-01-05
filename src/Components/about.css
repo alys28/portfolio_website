@@ -8,3 +8,15 @@
 .notable-stat p {
   @apply text-center text-sm text-gray-300;
 }
+
+@media screen and (max-width: 430px) {
+  .notable-stats-section {
+    @apply flex-wrap;
+  }
+  .notable-stat {
+    @apply w-[10wv] text-[15px];
+  }
+  .notable-stat p {
+    @apply text-[10px];
+  }
+}

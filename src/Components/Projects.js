@@ -146,14 +146,14 @@ const Projects = () => {
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.youtube.com/watch?v=Pl3vavCDoF8&ab_channel=TED-EdStudentTalks"
-          className="flex flex-col items-center text-center hover:scale-105 duration-150 hover:-translate-y-1"
+          className="flex m-auto flex-col flex-1 w-[30vw] min-w-[200px] max-w-[500px]  shadow-[0px_5px_11px_8px_rgba(0,0,0,0.3)] rounded-[5px] justify-center items-center hover:scale-105 duration-150 hover:-translate-y-1"
         >
           <img
             src={require("../img/aly_ted_talk.png")}
             alt="student Ted Talk"
-            className="w-[400px] rounded-t-lg shadow-[0px_5px_11px_8px_rgba(0,0,0,0.1)] "
+            className="flex-1 rounded-t-lg w-[100%] shadow-[0px_5px_11px_8px_rgba(0,0,0,0.1)] "
           />
-          <figcaption className="bg-white dark:text-white dark:bg-[#121212] w-[400px] p-3 font-Montserrat font-light rounded-b-md">
+          <figcaption className="caption-talk bg-white w-[100%] dark:text-white md:text-[16px] dark:bg-[#121212] flex-1 p-3 font-Montserrat font-light rounded-b-md">
             TED-ED Talk about Entrepreneurship and Education
           </figcaption>
         </a>

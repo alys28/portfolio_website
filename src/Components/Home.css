@@ -1,0 +1,5 @@
+@media screen and (max-width: 450px) {
+  .profile-pic-container {
+    min-width: 200px;
+  }
+}

@@ -3,7 +3,6 @@ const Contact = () => {
     <div
       id="contact"
       style={{
-        height: "70vh",
         minHeight: "800px",
         display: "flex",
         padding: "20px",
@@ -15,13 +14,13 @@ const Contact = () => {
       }}
     >
       <div
-        data-aos="fade-left"
+        data-aos="fade-right"
         className="flex flex-col justify-around bg-bg_contact shadow-[0px_5px_11px_8px_rgba(255,255,255,0.2)] rounded-lg p-5 w-[80%] m-5"
       >
-        <h1 className="font-bold text-[50px] text-white p-10 text-center">
+        <h1 className="font-bold sm:text-[50px] text-[30px] text-white p-10 text-center">
           Get in Touch!
         </h1>
-        <h2 className="text-gray-300 text-xl">
+        <h2 className="text-gray-300 md:text-xl sm:text-sm">
           Have a question? Feel free to contact me! Send me an email: <br />
           <a
             href="mailto:alyshariff2810@gmail.com"
@@ -45,14 +44,14 @@ const Contact = () => {
               type="text"
               name="name"
               placeholder="Full name"
-              className="m-5 p-2 rounded-sm bg-transparent border-b-2 text-white flex-1"
+              className="sm:m-5 mt-2 sm:p-2  rounded-sm bg-transparent border-b-2 text-white flex-1"
             />
             <input
               required
               type="email"
               name="email"
               placeholder="Email"
-              className="m-5 p-2 rounded-sm bg-transparent border-b-2 text-white flex-1"
+              className="sm:m-5 sm:p-2 mt-3 pt-3 rounded-sm bg-transparent border-b-2 text-white flex-1"
             />
           </div>
           <textarea
