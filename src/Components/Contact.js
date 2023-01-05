@@ -32,13 +32,12 @@ const Contact = () => {
         </h2>
         <form
           className="flex flex-col justify-around"
-          name="contact"
-          netlify
-          netlify-honeypot="bot-field"
-          hidden
-          method="POST"
+          name="contact v1"
+          data-netlify="true"
+          method="post"
+          onSubmit="submit"
         >
-          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="form-name" value="contact v1" />
 
           <div className="flex flex-wrap">
             <input
