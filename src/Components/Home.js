@@ -29,9 +29,9 @@ const Home = () => {
             </h1>
             <TypeAnimation
               sequence={[
-                "Software Developer", // Types 'One'
+                "Computer Science @ UWaterloo", // Types 'One'
                 500, // Waits 500ms
-                "CEGEP Student", // Deletes 'Software Developer' and types 'CEGEP Student'
+                "Regeneron ISEF' 23 Finalist", // Deletes 'Software Developer' and types 'CEGEP Student'
                 500,
                 "Entrepreneur", // Types 'Entrepreneur'
                 500,

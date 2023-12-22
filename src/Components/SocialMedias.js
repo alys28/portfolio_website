@@ -10,7 +10,7 @@ const SocialMedias = () => {
   return (
     <div className="flex">
       <a
-        href="https://github.com/Freakboy123"
+        href="https://github.com/alys28"
         target="_blank"
         rel="noopener noreferrer"
         className="p-5"

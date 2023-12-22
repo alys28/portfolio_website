@@ -83,7 +83,11 @@ const skillsList = [
     logo: "devicon-nodejs-plain-wordmark colored",
     efficiency: "75",
   },
-
+  // {
+  //   name: "Racket",
+  //   logo: require("../img/racket_logo.png"),
+  //   efficiency: "60",
+  // },
   {
     name: "MongoDB",
     logo: "devicon-mongodb-plain-wordmark colored",
@@ -105,10 +109,10 @@ const About = () => {
             STEM Student and Programmer
           </h3>
           <p className="text-gray-500 p-2 font-light dark:text-gray-300 text-lg ">
-            I'm currently an <b>18-year-old CEGEP student</b> in Montreal
-            attending <b>Marianopolis College</b> in the Honours Pure and
-            Applied Science Program. I have been coding for almost 4 years and
-            my work is mainly focused in{" "}
+            I'm currently a <b>19-year-old University student</b> originally
+            from Montreal attending the <b>University of Waterloo</b> in
+            Computer Science with Co-op. I have been coding for almost 5 years
+            and my work is mainly focused in{" "}
             <b>web development and machine learning</b>. I discovered my passion
             for software development during the COVID pandemic, when I realized
             the importance of technology and its impact on our lives. As a STEM
@@ -139,7 +143,7 @@ const About = () => {
               ? require("../img/other_icons/web_dev_white.png")
               : require("../img/other_icons/web_dev.png")
           }
-          name="Frontend Web Development"
+          name="Full-stack Web Development"
         />
         <ServiceCard
           logo={
@@ -167,7 +171,7 @@ const About = () => {
         />
       </div>
       <div
-        className="notable-stats-section flex justify-around w-full mt-10 p-7"
+        className="notable-stats-section flex-wrap flex justify-around w-full mt-10 p-7"
         style={{
           background:
             "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(79,70,229,1) 0%, rgba(0,161,255,1) 100%)",
@@ -178,11 +182,12 @@ const About = () => {
           <p>in sales</p>
         </div>
         <div data-aos="zoom-in" className="notable-stat">
-          <h4>100+</h4>
-          <p>satisfied customers</p>
+          <h4>ISEF'23</h4>
+          <p>Finalist</p>
         </div>
+
         <div data-aos="zoom-in" className="notable-stat">
-          <h4>4</h4>
+          <h4>5</h4>
           <p>years of coding experience</p>
         </div>
       </div>

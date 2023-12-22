@@ -33,6 +33,41 @@ const WorkItem = ({ name, company, date, description, image }) => {
     </div>
   );
 };
+const JobItem = ({ name, company, date, description, image }) => {
+  return (
+    <div
+      data-aos="zoom-up"
+      data-aos-easing="ease-out"
+      className="flex flex-col flex-1 items-center m-5 dark:text-black  "
+    >
+      <div>
+        <div className="flex justify-between">
+          <div>
+            <div className="font-bold text-lg">{name}</div>
+            <div className="font-bold text-lg">@{company}</div>
+          </div>
+          {image && (
+            <img
+              src={image}
+              style={{
+                borderRadius: "5%",
+                height: "80px",
+                marginLeft: "10px",
+              }}
+              alt="company logo"
+            />
+          )}
+        </div>
+        <div className="text-lg text-slate-600	">{date}</div>
+        <div className="font-light	 pt-4 text-[1.2rem] text-justify">
+          {description.map((line) => (
+            <p>{line}</p>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const Experience = () => {
   //Education, work experience, awards + certification
@@ -51,6 +86,28 @@ const Experience = () => {
           <div className="flex flex-col">
             <div className="education-entry">
               <div className="flex items-center justify-between">
+                <h3 className="title">University of Waterloo</h3>
+                <p>2023-2028</p>
+              </div>
+              <div className="flex justify-between ">
+                <div>
+                  <p>— Computer Science (Co-op)</p>
+                  <ul className="font-light">
+                    <li>
+                      Relevant Coursework: CS145 (Advanced), MATH147 (Calculus I
+                      - Advanced), PHYS121
+                    </li>
+                  </ul>
+                </div>
+                <img
+                  src={require("../img/waterloo_logo.png")}
+                  style={{ height: "6rem", margin: "10px" }}
+                  alt="UWaterloo Logo"
+                />
+              </div>
+            </div>
+            <div className="education-entry">
+              <div className="flex items-center justify-between">
                 <h3 className="title">Marianopolis College</h3>
                 <p>2022-2024</p>
               </div>
@@ -59,8 +116,8 @@ const Experience = () => {
                   <p>— Honours Pure and Applied Science</p>
                   <ul className="font-light">
                     <li>
-                      Co-founder and Executive of 3 clubs (Web Dev Club,
-                      Engineering Club, Career Club){" "}
+                      Co-founder and Executive of 2 clubs (Web Dev Club,
+                      Engineering Club){" "}
                     </li>
                   </ul>
                 </div>
@@ -100,6 +157,26 @@ const Experience = () => {
                   alt="Brebeuf Logo"
                 />
               </div>
+            </div>
+          </div>
+        </div>
+        <div className="m-10 p-4 pb-10 pt-10 bg-[#cfd6e3] shadow-lg rounded-xl">
+          <div>
+            <h2 className="text-[30px] dark:text-black">Work Experience</h2>
+            <hr className="w-[2rem] border-indigo-500 border-[3px] rounded-sm" />
+            <div className="flex ">
+              <JobItem
+                name={"Software Developer"}
+                company={"DoorHan International"}
+                date={"Mar. 2023 - Aug. 2023"}
+                description={[
+                  " - Developed a React Native mobile application aimed at enhancing the company's efficiency in delivering quotes to customers promptly.",
+                  "- Also contributed to the development of a React web application tailored for administrators to track and manage employee-client interactions.",
+                  "- Implemented a NodeJS (Express) API for seamless communication betweeen the web interface, mobile app and backend.",
+                  "- Employed Postgres SQL as the database for secure and scalable data storage and management.",
+                ]}
+                image={require("../img/doorhan_logo.png")}
+              />
             </div>
           </div>
         </div>
@@ -144,7 +221,7 @@ const Experience = () => {
           target="_blank"
           data-aos="fade-right"
           rel="noopener noreferrer"
-          href="https://github.com/Freakboy123/Resume/blob/main/Shariff_CV.pdf"
+          href="https://github.com/alys28/Resume/blob/main/Shariff_Resume.pdf"
           className="border-2 p-3 rounded-lg font-ChivoMono text-indigo-400 border-indigo-400 shadow-lg hover:shadow-[0px_5px_11px_8px_rgba(255,255,255,0.1)]"
         >
           View Full CV

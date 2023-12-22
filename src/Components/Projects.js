@@ -2,6 +2,26 @@ import "./Projects.css";
 import { projectCodingList } from "./projectList";
 import { useRef, useState } from "react";
 
+const highlightsList = [
+  {
+    name: "Hack The North Finalist",
+    image: require("../img/htn_logo.jpeg"),
+    otherImages: [require("../img/DriveSense-logos.jpeg")],
+    github: "https://github.com/xinlei55555/htn2023",
+    url: null,
+    video: "https://devpost.com/software/drive-sense",
+    desc: "My team and I won the biggest hackathon in Canada! We built Built DriveSense, an advanced app that aims to enhance road safety by evaluating and addressing poor driving using computer vision and machine learning algorithms. The project features a React Native mobile frontend and GPS connectivity. The backend, built with Django utilizes YOLOv5 and YOLOv8 models for computer vision, analyzing camera feed images to assess driver habits, infer acceleration, and determine reaction time at red lights.",
+  },
+  {
+    name: "Regeneron International Science and Engineering Fair Finalist",
+    image: require("../img/isef_logo.png"),
+    otherImages: [require("../img/projects/ASL_translator/asl_logo.png")],
+    github: "https://github.com/alys28/ASL-words-translator",
+    url: "https://projectboard.world/isef/project/robo053t-artificial-sign-language",
+    video: null,
+    desc: "My partner Xin Lei Lin and I built Artificial Sign Langague, a machine learning software that aims to translate American Sign Language into English words. Our project was invited to compete in Dallas, at the world's largest science fair for high school students.",
+  },
+];
 const ProjectCodeMedia = ({ project, onClick }) => {
   return (
     <div
@@ -9,7 +29,7 @@ const ProjectCodeMedia = ({ project, onClick }) => {
         onClick(project);
       }}
       data-aos="zoom-in-down"
-      className="project-media project-media flex m-auto flex-col flex-1 w-[30vw] max-w-[500px]  shadow-[0px_5px_11px_8px_rgba(0,0,0,0.3)] rounded-[5px] justify-center items-center"
+      className=" project-media flex m-auto flex-col flex-1 w-[30vw] max-w-[500px]  shadow-[0px_5px_11px_8px_rgba(0,0,0,0.3)] rounded-[5px] justify-center items-center"
     >
       <div
         style={{
@@ -49,7 +69,7 @@ const ProjectPopupMedia = ({ project }) => {
               <div className="font-bold text-[30px]">{project.name}</div>
               <div className="font-light pt-10 pr-10">{project.desc}</div>
             </div>
-            <div className="flex justify-left font-ChivoMono xs:text-[12px]">
+            <div className="mt-10 selection:flex justify-left font-ChivoMono xs:text-[12px]">
               {project.url && (
                 <a
                   target="_blank"
@@ -116,9 +136,26 @@ const Projects = () => {
   return (
     <div className="projects">
       <h1 className="text-center font-bold text-[50px] text-white pt-10">
-        Projects
+        Projects and Awards
       </h1>
       <div>
+        <div className="m-10 p-4 pb-10 pt-4 bg-[#d3d2d6] shadow-lg rounded-xl">
+          <h2 className="p-5 font-ChivoMono font-bold text-[30px] text-center  mt-5">
+            Highlights
+          </h2>
+          <div className="md:flex flex-wrap justify-center align-middle">
+            {highlightsList.map((project) => {
+              return (
+                <div className="md:m-3">
+                  <ProjectCodeMedia
+                    project={project}
+                    onClick={handleOpenClick}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </div>
         <h2 className="p-5 font-ChivoMono text-white text-[30px] sm:text-center  mt-5">
           Coding Projects{" "}
           <img
@@ -132,7 +169,7 @@ const Projects = () => {
             }}
           />
         </h2>
-        <div className="projects-section">
+        <div className="projects-section justify-between">
           {projectCodingList.map((project) => {
             return (
               <ProjectCodeMedia project={project} onClick={handleOpenClick} />

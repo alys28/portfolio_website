@@ -1,12 +1,12 @@
 .notable-stat {
-  @apply flex flex-col items-center text-white font-ChivoMono w-[10rem] text-lg justify-center shadow-lg bg-slate-800 rounded-lg p-5 m-2 hover:-translate-y-1 hover:scale-110 duration-200;
+  @apply flex flex-col  items-center  text-white font-ChivoMono text-[40px] justify-center shadow-lg bg-slate-800 rounded-lg p-5 m-2 hover:-translate-y-1 hover:scale-110 duration-200;
 }
 
 .notable-stat h4 {
   @apply font-bold text-center;
 }
 .notable-stat p {
-  @apply text-center text-sm text-gray-300;
+  @apply text-center text-[18px] text-gray-300;
 }
 
 @media screen and (max-width: 430px) {
@@ -14,9 +14,9 @@
     @apply flex-wrap;
   }
   .notable-stat {
-    @apply w-[10wv] text-[15px];
+    @apply w-[10wv] text-[30px];
   }
   .notable-stat p {
-    @apply text-[10px];
+    @apply text-[30px];
   }
 }
